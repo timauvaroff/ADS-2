@@ -27,12 +27,10 @@ double calcItem(double x, uint16_t n) {
 double expn(double x, uint16_t count) {
     double term = 1.0;
     double sum = 0.0;
-
-    double i = 1.0;
     while (fabs(term) > 1e-10) {
         sum += term;
-        term *= x / i;
-        i++;
+        term *= x / count;
+        count++;
     }
 
     return sum;
