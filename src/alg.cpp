@@ -5,28 +5,18 @@
 
 
 double pown(double value, uint16_t n) {
-  if (n == 0) {
-        return 1.0;
-    }
-
-    double result = value;
-    for (uint16_t i = 1; i < n; ++i) {
+  double result = 1.0;
+    for (uint16_t i = 0; i < n; i++) {
         result *= value;
     }
-
     return result;
 }
 
 uint64_t fact(uint16_t n) {
-  if (n == 0) {
-        return 1;
-    }
-
-    uint64_t result = 1;
-    for (uint16_t i = 2; i <= n; ++i) {
+  uint64_t result = 1;
+    for (uint16_t i = 1; i <= n; i++) {
         result *= i;
     }
-
     return result;
 }
 
