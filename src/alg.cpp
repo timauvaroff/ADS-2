@@ -2,6 +2,7 @@
 #include <cstdint>
 #include <cmath>
 #include "alg.h"
+#include <iostream>
 
 
 double pown(double value, uint16_t n) {
@@ -37,8 +38,7 @@ double calcItem(double x, uint16_t n) {
 double expn(double x, uint16_t count) {
   double sum = 0.0;
     for (uint16_t n = 0; n < count; n++) {
-        double item = calcItem(x, n);
-        sum += item;
+        sum += = calcItem(x, n);
     }
 
     return sum;
