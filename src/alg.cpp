@@ -25,12 +25,15 @@ double calcItem(double x, uint16_t n) {
 }
 
 double expn(double x, uint16_t count) {
-  double sum = 0.0;
-    for (uint16_t n = 0; n < count; n++) {
-        sum += calcItem(x, n);
+  double result = 1.0;
+    double term = x;
+
+    for (uint16_t i = 1; i < count; ++i) {
+        term *= x / i;
+        result += term;
     }
 
-    return sum;
+    return result;
 }
 
 double sinn(double x, uint16_t count) {
