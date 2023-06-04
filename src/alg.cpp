@@ -25,15 +25,11 @@ double calcItem(double x, uint16_t n) {
 }
 
 double expn(double x, uint16_t count) {
-    double term = 1.0;
-    double sum = 0.0;
-    while (fabs(term) > 1e-10) {
-        sum += term;
-        term *= x / count;
-        count++;
-    }
-
-    return sum;
+  double exp = 1.0;
+  for (int i = 1; i <= count; i++) {
+    exp += calcItem(x, i);
+  }
+  return exp;
 }
 
 double sinn(double x, uint16_t count) {
